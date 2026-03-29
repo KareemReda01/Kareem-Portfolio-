@@ -3,37 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kareem Reda | Performance Marketer & Media Buyer</title>
+    <title>Kareem Reda | Performance Marketing Strategist & Media Buyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0056b3;
-            --secondary-color: #f4f4f4;
-            --text-color: #333;
-            --bg-color: #fff;
+            --primary: #0F172A; /* Dark Navy for text and deep elements */
+            --accent: #14B8A6;  /* Teal for highlights, links, and action buttons */
+            --accent-light: #E0F2F1; /* Very light teal for background sections */
+            --bg-site: #F9FAFB;  /* Off-white site background */
+            --bg-card: #FFFFFF;  /* Pure white for cards */
+            --text-main: #334155; /* Neutral dark grey for descriptions */
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        * {
             margin: 0;
             padding: 0;
-            color: var(--text-color);
-            line-height: 1.6;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-site);
+            color: var(--primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        /* --- Hero/Header Section --- */
         header {
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: white;
-            padding: 3rem 1rem;
+            padding: 5rem 0;
             text-align: center;
         }
+
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
+
         header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
+            font-size: 1.3rem;
+            font-weight: 300;
             opacity: 0.9;
         }
-        .container {
+
+        /* --- Main Sections --- */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- About Section --- */
+        .about {
+            background-color: var(--bg-card);
+        }
+
+        .about-content {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: auto;
+            color: var(--text-main);
+        }
+
+        /* --- Portfolio Grid --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: var(--accent-light);
+        }
+
+        .card .niche {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .card .metrics {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            background-color: var(--accent-light);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        /* --- Consulting Section --- */
+        .consulting {
+            background-color: var(--accent-light);
+        }
+
+        /* --- Contact Section --- */
+        .contact {
+            background-color: var(--bg-card);
+            text-align: center;
+        }
+
+        .contact-cta {
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .contact-cta:hover {
+            opacity: 0.9;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.3rem; }
+            header p { font-size: 1.1rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Kareem Reda</h1>
+            <p>Performance Marketing Strategist & Media Buyer | Based in Cairo</p>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Data-Driven Growth</h2>
+            <div class="about-content">
+                <p>Leveraging my medical background to dissect marketing data with precision. I specialize in scaling E-commerce brands, driving B2B leads, and optimizing app growth through performance marketing strategies that produce measurable ROI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Campaign Management Portfolio</h2>
+            <p class="section-subtitle">A showcase of businesses I have directly managed and scaled.</p>
+            
+            <div class="projects-grid">
+                
+                <div class="card">
+                    <span class="niche">E-commerce / Home Textiles</span>
+                    <h3>Madian's Home</h3>
+                    <p>Current client. I manage the performance marketing, focusing on scaling e-commerce sales for a wide range of home furnishings and bedsheets.</p>
+                    <div class="metrics">Focus: Scaling ROAS | Conversion Optimization | Sales Growth</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">Tourism / Lead Gen</span>
+                    <h3>Dar Al-Suez</h3>
+                    <p>Specialized Hajj & Umrah Tourism Agency. Executed lead generation campaigns to capture potential clients for specialized travel packages.</p>
+                    <div class="metrics">Focus: Cost Per Lead (CPL) | Lead Quality | Niche Targeting</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">E-commerce / Fashion</span>
+                    <h3>Skirta</h3>
+                    <p>Womens' Fashion Brand. Developed and managed advertising campaigns to drive brand awareness and scale sales of women's wear.</p>
+                    <div class="metrics">Focus: Sales Conversion Rate | Average Order Value (AOV)</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">E-commerce / Medical Apparel</span>
+                    <h3>HQ Steps</h3>
+                    <p>Brand specializing in medical footwear for women. Responsible for the end-to-end media buying strategy and campaign optimization.</p>
+                    <div class="metrics">Focus: Purchase Conversion Rate | Audience Refinement</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">B2B & Niche E-commerce</span>
+                    <h3>HQ - Medical</h3>
+                    <p>Specialized medical tools (e.g., surgical suturing kits). Developed brand strategy and optimized niche product campaigns and landing pages.</p>
+                    <div class="metrics">Focus: Landing Page Optimization | Market Education | ROAS</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="consulting" id="consulting">
+        <div class="container">
+            <h2 class="section-title">Growth Strategy & Consulting</h2>
+            <p class="section-subtitle">Brands where I have built the foundation for strategic growth and performance marketing success.</p>
+            
+            <div class="projects-grid">
+                
+                <div class="card">
+                    <span class="niche">Food & Grocery App</span>
+                    <h3>8Orders</h3>
+                    <div class="metrics">Strategic Growth | User Acquisition</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">E-commerce / Cosmetics</span>
+                    <h3>Proxima</h3>
+                    <div class="metrics">Strategic Performance Marketing</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">Dropshipping Model</span>
+                    <h3>Zwad</h3>
+                    <div class="metrics">Growth Strategy | Operations Alignment</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">Corporate Training</span>
+                    <h3>Bright Brains</h3>
+                    <div class="metrics">Strategy | B2B Funnel Building</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">Logistics & B2B</span>
+                    <h3>Stox</h3>
+                    <div class="metrics">Strategy | Fulfillment Scaling</div>
+                </div>
+
+                <div class="card">
+                    <span class="niche">Performance Agency</span>
+                    <h3>99% Agency</h3>
+                    <div class="metrics">Strategy Formulation | Team Training</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Scale Your ROAS?</h2>
+            <p class="section-subtitle">Let's discuss how we can work together to achieve your business growth goals.</p>
+            <p>Email me at: <a href="mailto:KareemReda.Media@gmail.com" style="color:var(--accent); font-weight:600;">KareemReda.Media@gmail.com</a></p>
+            <p>Connect on LinkedIn: <a href="#" style="color:var(--accent); font-weight:600;">linkedin.com/in/kareemreda</a></p>
+            <a href="mailto:KareemReda.Media@gmail.com" class="contact-cta">Discuss Your Project</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kareem Reda. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
             max-width: 1100px;
             margin: auto;
             padding: 0 20px;
