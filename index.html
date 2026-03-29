@@ -112,6 +112,8 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(0,0,0,0.02);
             position: relative;
+            display: flex; /* Added for better vertical alignment */
+            flex-direction: column;
         }
 
         .card:hover {
@@ -140,6 +142,7 @@
             font-size: 1rem;
             color: var(--text-main);
             margin-bottom: 20px;
+            flex-grow: 1; /* Pushes metrics to the bottom */
         }
 
         .card .metrics {
@@ -149,31 +152,39 @@
             background-color: var(--accent-light);
             padding: 8px 12px;
             border-radius: 6px;
-            margin-top: 15px;
+            margin-top: auto; /* Aligns with bottom of card */
         }
 
-        /* --- Images Styling --- */
-        .card-img {
+        /* --- NEW Images Styling - Fit without cropping --- */
+        .card-img-container {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            object-position: top;
-            border-radius: 8px;
+            display: flex;
+            justify-content: center; /* Centers the image if it's narrow */
             margin-bottom: 15px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .card-img {
+            max-width: 100%; /* Image fills container width but never exceeds it */
+            height: auto; /* Image maintains original aspect ratio, no cropping */
+            display: block;
+            border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        /* HQ Medical multi-grid: Changed to 2 columns for larger images */
         .multi-img-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-bottom: 15px;
         }
 
         .multi-img-grid img {
             width: 100%;
-            height: 80px;
-            object-fit: cover;
+            height: auto; /* Keep aspect ratio for small images too */
+            object-fit: contain; /* Ensure full image visibility */
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -217,7 +228,9 @@
             header h1 { font-size: 2.3rem; }
             header p { font-size: 1.1rem; }
             .section-title { font-size: 1.8rem; }
-            .multi-img-grid img { height: 60px; }
+            .projects-grid {
+                grid-template-columns: 1fr; /* Stack cards on mobile */
+            }
         }
     </style>
 </head>
@@ -249,7 +262,9 @@
                 <div class="card">
                     <span class="niche">E-commerce / Home Textiles</span>
                     <h3>Madian's Home</h3>
-                    <img src="madian.jpg" alt="Madian's Home Campaign Results" class="card-img">
+                    <div class="card-img-container">
+                        <img src="madian.jpg" alt="Madian's Home Campaign Results" class="card-img">
+                    </div>
                     <p>Current client. I manage the performance marketing, focusing on scaling e-commerce sales for a wide range of home furnishings and bedsheets.</p>
                     <div class="metrics">Focus: Scaling ROAS | Conversion Optimization | Sales Growth</div>
                 </div>
@@ -257,7 +272,9 @@
                 <div class="card">
                     <span class="niche">Tourism / Lead Gen</span>
                     <h3>Dar Al-Suez</h3>
-                    <img src="dar.jpg" alt="Dar Al-Suez Campaign Results" class="card-img">
+                    <div class="card-img-container">
+                        <img src="dar.jpg" alt="Dar Al-Suez Campaign Results" class="card-img">
+                    </div>
                     <p>Specialized Hajj & Umrah Tourism Agency. Executed lead generation campaigns to capture potential clients for specialized travel packages.</p>
                     <div class="metrics">Focus: Cost Per Lead (CPL) | Lead Quality | Niche Targeting</div>
                 </div>
@@ -265,7 +282,9 @@
                 <div class="card">
                     <span class="niche">E-commerce / Fashion</span>
                     <h3>Skirta</h3>
-                    <img src="skirta.jpg" alt="Skirta Campaign Results" class="card-img">
+                    <div class="card-img-container">
+                        <img src="skirta.jpg" alt="Skirta Campaign Results" class="card-img">
+                    </div>
                     <p>Womens' Fashion Brand. Developed and managed advertising campaigns to drive brand awareness and scale sales of women's wear.</p>
                     <div class="metrics">Focus: Sales Conversion Rate | Average Order Value (AOV)</div>
                 </div>
@@ -273,7 +292,9 @@
                 <div class="card">
                     <span class="niche">E-commerce / Medical Apparel</span>
                     <h3>HQ Steps</h3>
-                    <img src="steps.jpg" alt="HQ Steps Campaign Results" class="card-img">
+                    <div class="card-img-container">
+                        <img src="steps.jpg" alt="HQ Steps Campaign Results" class="card-img">
+                    </div>
                     <p>Brand specializing in medical footwear for women. Responsible for the end-to-end media buying strategy and campaign optimization.</p>
                     <div class="metrics">Focus: Purchase Conversion Rate | Audience Refinement</div>
                 </div>
@@ -285,7 +306,7 @@
                         <img src="medical.jpg" alt="HQ Medical Result 1">
                         <img src="medical1.jpg" alt="HQ Medical Result 2">
                         <img src="medical2.jpg" alt="HQ Medical Result 3">
-                    </div>
+                        </div>
                     <p>Specialized medical tools (e.g., surgical suturing kits). Developed brand strategy and optimized niche product campaigns and landing pages.</p>
                     <div class="metrics">Focus: Landing Page Optimization | Market Education | ROAS</div>
                 </div>
@@ -346,7 +367,7 @@
             <h2 class="section-title">Ready to Scale Your ROAS?</h2>
             <p class="section-subtitle">Let's discuss how we can work together to achieve your business growth goals.</p>
             <p>Email me at: <a href="mailto:KareemReda.Media@gmail.com" style="color:var(--accent); font-weight:600;">KareemReda.Media@gmail.com</a></p>
-            <p>Connect on LinkedIn: <a href="#" style="color:var(--accent); font-weight:600;">linkedin.com/in/kareemreda</a></p>
+            <p>Connect on LinkedIn: <a href="https://linkedin.com/in/kareemreda" style="color:var(--accent); font-weight:600;">linkedin.com/in/kareemreda</a></p>
             <a href="mailto:KareemReda.Media@gmail.com" class="contact-cta">Discuss Your Project</a>
         </div>
     </section>
