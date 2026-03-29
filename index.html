@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0F172A; /* Dark Navy for text and deep elements */
-            --accent: #14B8A6;  /* Teal for highlights, links, and action buttons */
-            --accent-light: #E0F2F1; /* Very light teal for background sections */
-            --bg-site: #F9FAFB;  /* Off-white site background */
-            --bg-card: #FFFFFF;  /* Pure white for cards */
-            --text-main: #334155; /* Neutral dark grey for descriptions */
+            --primary: #0F172A; 
+            --accent: #14B8A6;  
+            --accent-light: #E0F2F1; 
+            --bg-site: #F9FAFB;  
+            --bg-card: #FFFFFF;  
+            --text-main: #334155; 
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
@@ -149,6 +149,33 @@
             background-color: var(--accent-light);
             padding: 8px 12px;
             border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        /* --- Images Styling --- */
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .multi-img-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .multi-img-grid img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         /* --- Consulting Section --- */
@@ -190,6 +217,7 @@
             header h1 { font-size: 2.3rem; }
             header p { font-size: 1.1rem; }
             .section-title { font-size: 1.8rem; }
+            .multi-img-grid img { height: 60px; }
         }
     </style>
 </head>
@@ -221,6 +249,7 @@
                 <div class="card">
                     <span class="niche">E-commerce / Home Textiles</span>
                     <h3>Madian's Home</h3>
+                    <img src="madian.jpg" alt="Madian's Home Campaign Results" class="card-img">
                     <p>Current client. I manage the performance marketing, focusing on scaling e-commerce sales for a wide range of home furnishings and bedsheets.</p>
                     <div class="metrics">Focus: Scaling ROAS | Conversion Optimization | Sales Growth</div>
                 </div>
@@ -228,6 +257,7 @@
                 <div class="card">
                     <span class="niche">Tourism / Lead Gen</span>
                     <h3>Dar Al-Suez</h3>
+                    <img src="dar.jpg" alt="Dar Al-Suez Campaign Results" class="card-img">
                     <p>Specialized Hajj & Umrah Tourism Agency. Executed lead generation campaigns to capture potential clients for specialized travel packages.</p>
                     <div class="metrics">Focus: Cost Per Lead (CPL) | Lead Quality | Niche Targeting</div>
                 </div>
@@ -235,6 +265,7 @@
                 <div class="card">
                     <span class="niche">E-commerce / Fashion</span>
                     <h3>Skirta</h3>
+                    <img src="skirta.jpg" alt="Skirta Campaign Results" class="card-img">
                     <p>Womens' Fashion Brand. Developed and managed advertising campaigns to drive brand awareness and scale sales of women's wear.</p>
                     <div class="metrics">Focus: Sales Conversion Rate | Average Order Value (AOV)</div>
                 </div>
@@ -242,6 +273,7 @@
                 <div class="card">
                     <span class="niche">E-commerce / Medical Apparel</span>
                     <h3>HQ Steps</h3>
+                    <img src="steps.jpg" alt="HQ Steps Campaign Results" class="card-img">
                     <p>Brand specializing in medical footwear for women. Responsible for the end-to-end media buying strategy and campaign optimization.</p>
                     <div class="metrics">Focus: Purchase Conversion Rate | Audience Refinement</div>
                 </div>
@@ -249,6 +281,11 @@
                 <div class="card">
                     <span class="niche">B2B & Niche E-commerce</span>
                     <h3>HQ - Medical</h3>
+                    <div class="multi-img-grid">
+                        <img src="medical.jpg" alt="HQ Medical Result 1">
+                        <img src="medical1.jpg" alt="HQ Medical Result 2">
+                        <img src="medical2.jpg" alt="HQ Medical Result 3">
+                    </div>
                     <p>Specialized medical tools (e.g., surgical suturing kits). Developed brand strategy and optimized niche product campaigns and landing pages.</p>
                     <div class="metrics">Focus: Landing Page Optimization | Market Education | ROAS</div>
                 </div>
@@ -311,150 +348,6 @@
             <p>Email me at: <a href="mailto:KareemReda.Media@gmail.com" style="color:var(--accent); font-weight:600;">KareemReda.Media@gmail.com</a></p>
             <p>Connect on LinkedIn: <a href="#" style="color:var(--accent); font-weight:600;">linkedin.com/in/kareemreda</a></p>
             <a href="mailto:KareemReda.Media@gmail.com" class="contact-cta">Discuss Your Project</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Kareem Reda. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
-        section {
-            padding: 4rem 0;
-            border-bottom: 1px solid #ddd;
-        }
-        h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-        }
-        /* About Section */
-        .about-content {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            font-size: 1.1rem;
-        }
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: var(--bg-color);
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .metrics {
-            background: var(--secondary-color);
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        /* Contact Section */
-        .contact-info {
-            text-align: center;
-            font-size: 1.2rem;
-        }
-        .contact-info a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            background: #222;
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <h1>Kareem Reda</h1>
-            <p>Medical Doctor | Senior Media Buyer & E-commerce Growth Partner</p>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="container about-content">
-            <h2>About Me</h2>
-            <p>I bring a unique analytical approach to digital marketing by combining my background in medicine with advanced performance marketing strategies. Based in Cairo, I specialize in scaling E-commerce brands, B2B lead generation, and App growth through data-driven media buying.</p>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>Featured Case Studies & Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="card">
-                    <h3>8Orders App</h3>
-                    <p><strong>Niche:</strong> Food & Grocery Delivery App</p>
-                    <p>Managed localized growth marketing and user acquisition campaigns in Hurghada and Assiut, driving app installs and active daily orders.</p>
-                    <div class="metrics">
-                        Key Focus: Cost Per Install (CPI), Active Users, Localized Targeting
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>HQ - Medical & HQ Steps</h3>
-                    <p><strong>Niche:</strong> Medical Supplies & Footwear</p>
-                    <p>Developed the brand strategy, managed performance marketing, and optimized landing pages for products ranging from surgical suturing kits to women's medical clogs.</p>
-                    <div class="metrics">
-                        Key Focus: ROAS, Conversion Rate Optimization (CRO), E-commerce Sales
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Skirta & Proxima</h3>
-                    <p><strong>Niche:</strong> Women's Fashion & Cosmetics</p>
-                    <p>Executed high-converting media buying campaigns for women's handbags (Skirta) and cosmetics (Proxima), focusing on brand awareness and direct sales.</p>
-                    <div class="metrics">
-                        Key Focus: Customer Acquisition Cost (CPA), Visual Creatives, Scaling
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>MedGrow Agency & Bright Brains</h3>
-                    <p><strong>Niche:</strong> B2B & Medical Marketing</p>
-                    <p>Lead generation for specialized medical marketing services and professional executive events/workshops.</p>
-                    <div class="metrics">
-                        Key Focus: Cost Per Lead (CPL), B2B Funnels, Event Registrations
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container contact-info">
-            <h2>Let's Scale Your Business</h2>
-            <p>Ready to improve your ROAS and scale your operations?</p>
-            <p>Email me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="#">linkedin.com/in/kareemreda</a></p>
         </div>
     </section>
 
