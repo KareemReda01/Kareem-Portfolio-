@@ -189,9 +189,38 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* --- Consulting Section --- */
-        .consulting {
+        /* --- NEW Industries Section --- */
+        .industries {
             background-color: var(--accent-light);
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tag {
+            background-color: var(--bg-card);
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .tag:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         /* --- Contact Section --- */
@@ -230,6 +259,10 @@
             .section-title { font-size: 1.8rem; }
             .projects-grid {
                 grid-template-columns: 1fr; 
+            }
+            .tag {
+                padding: 10px 18px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -315,49 +348,23 @@
         </div>
     </section>
 
-    <section class="consulting" id="consulting">
+    <section class="industries" id="industries">
         <div class="container">
-            <h2 class="section-title">Growth Strategy & Consulting</h2>
-            <p class="section-subtitle">Brands where I have built the foundation for strategic growth and performance marketing success.</p>
+            <h2 class="section-title">Industries Worked With</h2>
+            <p class="section-subtitle">A diverse range of niches where I've successfully scaled brands and driven growth.</p>
             
-            <div class="projects-grid">
-                
-                <div class="card">
-                    <span class="niche">Food & Grocery App</span>
-                    <h3>8Orders</h3>
-                    <div class="metrics">Strategic Growth | User Acquisition</div>
-                </div>
-
-                <div class="card">
-                    <span class="niche">E-commerce / Cosmetics</span>
-                    <h3>Proxima</h3>
-                    <div class="metrics">Strategic Performance Marketing</div>
-                </div>
-
-                <div class="card">
-                    <span class="niche">Dropshipping Model</span>
-                    <h3>Zwad</h3>
-                    <div class="metrics">Growth Strategy | Operations Alignment</div>
-                </div>
-
-                <div class="card">
-                    <span class="niche">Corporate Training</span>
-                    <h3>Bright Brains</h3>
-                    <div class="metrics">Strategy | B2B Funnel Building</div>
-                </div>
-
-                <div class="card">
-                    <span class="niche">Logistics & B2B</span>
-                    <h3>Stox</h3>
-                    <div class="metrics">Strategy | Fulfillment Scaling</div>
-                </div>
-
-                <div class="card">
-                    <span class="niche">Performance Agency</span>
-                    <h3>99% Agency</h3>
-                    <div class="metrics">Strategy Formulation | Team Training</div>
-                </div>
-
+            <div class="tags-container">
+                <span class="tag">Medical Supplies</span>
+                <span class="tag">Fashion</span>
+                <span class="tag">Cosmetics</span>
+                <span class="tag">Hajj & Umrah Services</span>
+                <span class="tag">Uniform Manufacturing</span>
+                <span class="tag">Home Textiles</span>
+                <span class="tag">Footwear</span>
+                <span class="tag">Accessories</span>
+                <span class="tag">Home Decor</span>
+                <span class="tag">E-commerce</span>
+                <span class="tag">B2B</span>
             </div>
         </div>
     </section>
@@ -378,3 +385,4 @@
 
 </body>
 </html>
+ 
